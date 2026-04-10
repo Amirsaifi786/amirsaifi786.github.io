@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/amirsaifi786.github.io/static/css/main.5f3f4fd0.css",
+    "main.js": "/amirsaifi786.github.io/static/js/main.2b2e4fb3.js",
+    "static/js/453.d67cb946.chunk.js": "/amirsaifi786.github.io/static/js/453.d67cb946.chunk.js",
+    "index.html": "/amirsaifi786.github.io/index.html",
+    "main.5f3f4fd0.css.map": "/amirsaifi786.github.io/static/css/main.5f3f4fd0.css.map",
+    "main.2b2e4fb3.js.map": "/amirsaifi786.github.io/static/js/main.2b2e4fb3.js.map",
+    "453.d67cb946.chunk.js.map": "/amirsaifi786.github.io/static/js/453.d67cb946.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f3f4fd0.css",
+    "static/js/main.2b2e4fb3.js"
+  ]
+}
