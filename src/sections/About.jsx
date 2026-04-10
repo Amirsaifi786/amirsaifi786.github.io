@@ -11,7 +11,8 @@ const About = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          About Me
+     
+        <img src="https://avatars.githubusercontent.com/u/159249074?v=4&size=64" alt="" />
         </motion.h2>
 
         <motion.div
