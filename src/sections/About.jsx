@@ -12,7 +12,9 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
         > */}
      
-        <img src="https://avatars.githubusercontent.com/u/159249074?v=4&size=64" alt="" />
+        <img   className="text-4xl font-bold text-center text-teal-400 mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }} src="https://avatars.githubusercontent.com/u/159249074?v=4&size=64" alt="" />
         {/* </motion.h2> */}
 
         <motion.div
