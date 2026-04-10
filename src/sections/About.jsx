@@ -6,7 +6,13 @@ const About = () => {
   return (
     <section id="about" className="py-20 md:py-32 bg-gray-800">
       <div className="container mx-auto px-4 max-w-5xl">
-
+<motion.h2
+          className="text-4xl font-bold text-center text-teal-400 mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }} 
+        >
+          About Me
+        </motion.h2>
 {/* <img   className="text-4xl font-bold text-center text-teal-400 mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }} 
