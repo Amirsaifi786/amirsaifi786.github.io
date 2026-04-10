@@ -6,16 +6,11 @@ const About = () => {
   return (
     <section id="about" className="py-20 md:py-32 bg-gray-800">
       <div className="container mx-auto px-4 max-w-5xl">
-        {/* <motion.h2
-          className="text-4xl font-bold text-center text-teal-400 mb-12"
+
+{/* <img   className="text-4xl font-bold text-center text-teal-400 mb-12"
           initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-        > */}
-     
-        <img   className="text-4xl font-bold text-center text-teal-400 mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }} src="https://avatars.githubusercontent.com/u/159249074?v=4&size=64" alt="" />
-        {/* </motion.h2> */}
+          whileInView={{ opacity: 1, y: 0 }} 
+          src="https://avatars.githubusercontent.com/u/159249074?v=4" alt="" /> */}
 
         <motion.div
           className="bg-gray-900 p-8 rounded-lg border border-gray-700"
