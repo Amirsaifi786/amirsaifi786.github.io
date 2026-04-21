@@ -14,7 +14,7 @@ const ProjectCard = ({ project, index }) => {
       {/* Image */}
       <div className="relative h-48 overflow-hidden bg-gray-800">
         <img 
-          src="https://amirsaifi786.github.io/images/nextgenstyleup.png" 
+          src="https://github.com/Amirsaifi786/Pixel-Shift-Image-Converter/raw/main/screenshots/uploadimagedisplay.png" 
           alt={project.name}
           className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
         />
