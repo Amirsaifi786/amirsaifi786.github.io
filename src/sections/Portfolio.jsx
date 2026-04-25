@@ -7,104 +7,161 @@ const Portfolio = () => {
   const [filter, setFilter] = useState('all');
 
   const projectData = [
+    
     {
-      name: 'RoomDekho - Real Estate Platform',
-      repo: 'roomdekhofrontend',
-      url: 'https://github.com/Amirsaifi786/roomdekhofrontend',
-      description: 'A full-stack real estate application for finding and listing properties.',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Express'],
-      type: 'full-stack',
-      image: 'https://via.placeholder.com/400x300?text=RoomDekho'
-    },
-    {
-      name: 'MERN E-Commerce',
-      repo: 'mern-ecommerce',
-      url: 'https://github.com/Amirsaifi786/mern-ecommerce',
-      description: 'Complete e-commerce platform with MongoDB, Express, React, and Node.js',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      type: 'full-stack',
-      image: 'https://via.placeholder.com/400x300?text=MERN+Ecommerce'
-    },
-    {
-      name: 'Laravel E-Commerce',
-      repo: 'LaravelEcommerce',
-      url: 'https://github.com/Amirsaifi786/LaravelEcommerce',
-      description: 'Traditional e-commerce built with Laravel and MySQL',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
-      type: 'backend',
-      image: 'https://via.placeholder.com/400x300?text=Laravel+Ecommerce'
-    },
-    {
-      name: 'Bill Management System',
-      repo: 'billmanagement',
-      url: 'https://github.com/Amirsaifi786/billmanagement',
-      description: 'Complete billing solution for small businesses to create invoices',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'backend',
-      image: 'https://via.placeholder.com/400x300?text=Bill+Management'
-    },
-    {
-      name: 'React Admin Dashboard',
-      repo: 'reactecommerceadmin',
-      url: 'https://github.com/Amirsaifi786/reactecommerceadmin',
-      description: 'Professional admin dashboard for e-commerce management',
-      tech: ['React.js', 'Tailwind CSS', 'Redux', 'Chart.js'],
-      type: 'frontend',
-      image: 'https://via.placeholder.com/400x300?text=Admin+Dashboard'
-    },
-    {
-      name: 'Laravel Role & Permission System',
-      repo: 'User_Role_Permission_And_Authorization_In_Laravel10',
-      url: 'https://github.com/Amirsaifi786/User_Role_Permission_And_Authorization_In_Laravel10',
-      description: 'Advanced user roles, permissions, and authorization system in Laravel 10',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Blade'],
-      type: 'backend',
-      image: 'https://via.placeholder.com/400x300?text=Laravel+Roles'
-    },
-    {
-      name: 'Location Management System',
-      repo: 'Location_management_system',
-      url: 'https://github.com/Amirsaifi786/Location_management_system',
-      description: 'GPS-based location management and tracking system',
-      tech: ['Laravel', 'MySQL', 'Maps API', 'Bootstrap'],
-      type: 'backend',
-      image: 'https://via.placeholder.com/400x300?text=Location+System'
-    },
-    {
-      name: 'Student ID Card System',
-      repo: 'Student_Id_Card-Management',
-      url: 'https://github.com/Amirsaifi786/Student_Id_Card-Management',
-      description: 'Student ID card generation and management system',
-      tech: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-      type: 'full-stack',
-      image: 'https://via.placeholder.com/400x300?text=Student+ID+Card'
-    },
-    {
-      name: 'React E-Commerce Admin',
-      repo: 'mern-clothing',
-      url: 'https://github.com/Amirsaifi786/mern-clothing',
-      description: 'Clothing store admin panel with MERN stack',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      type: 'full-stack',
-      image: 'https://via.placeholder.com/400x300?text=Clothing+Admin'
-    },
-    {
-      name: 'Fashion E-Commerce',
-      repo: 'fashionecom',
-      url: 'https://github.com/Amirsaifi786/fashionecom',
-      description: 'Modern fashion store with React and Tailwind CSS',
-      tech: ['React', 'Tailwind CSS', 'Context API', 'Node.js'],
-      type: 'frontend',
-      image: 'https://via.placeholder.com/400x300?text=Fashion+Store'
-    },
-    {
-      name: 'POS System',
-      repo: 'POSSYSTEM',
-      url: 'https://github.com/Amirsaifi786/POSSYSTEM',
-      description: 'Complete Point of Sale system for retail shops',
+      name: 'Esscopic - Machinery & Motors',
+      repo: 'esscopic',
+      url: 'https://esscopic.in/',
+      description: 'E-commerce platform for machinery and motor products',
       tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'backend',
-      image: 'https://via.placeholder.com/400x300?text=POS+System'
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Esscopic'
+    },
+    {
+      name: 'Zylotech India - IT Services',
+      repo: 'zylotechindia',
+      url: 'https://zylotechindia.com/',
+      description: 'IT services selling website',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Zylotech+India'
+    },
+    {
+      name: 'Kamsun Electronics',
+      repo: 'kamsungelectronics',
+      url: 'https://kamsungelectronics.com/',
+      description: 'E-commerce for electronics products',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Kamsun+Electronics'
+    },
+    {
+      name: 'Cloud Chaser - IT Services',
+      repo: 'cloudchaser',
+      url: 'https://cloudchaser.co.in/',
+      description: 'IT services selling website',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Cloud+Chaser'
+    },
+    {
+      name: 'Pincleiq Solutions - Electronics',
+      repo: 'pincleiqsolutions',
+      url: 'https://pincleiqsolutions.co.in/',
+      description: 'E-commerce platform for electronics products',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Pincleiq+Solutions'
+    },
+    {
+      name: 'Buttonhole - Mens Wear',
+      repo: 'buttonhole',
+      url: 'https://buttonhole.in/',
+      description: 'E-commerce for mens wear products',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Buttonhole'
+    },
+    {
+      name: 'Atharvke Electronics',
+      repo: 'atharvkelectronics',
+      url: 'https://atharvkelectronics.in/',
+      description: 'Electronic product selling e-commerce site',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Atharvke+Electronics'
+    },
+    {
+      name: 'Poulomi India - Mens Wear',
+      repo: 'poulomiindia',
+      url: 'https://poulomiindia.com/',
+      description: 'E-commerce for mens wear',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Poulomi+India'
+    },
+    {
+      name: 'Consulenza - Mens Wear',
+      repo: 'consulenza',
+      url: 'https://consulenza.co.in/',
+      description: 'Mens wear product e-commerce',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Consulenza'
+    },
+    {
+      name: 'Tixri Logistics - Mens & Women',
+      repo: 'tixrilogistics',
+      url: 'https://tixrilogistics.com/',
+      description: 'E-commerce for mens and women products',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Tixri+Logistics'
+    },
+    {
+      name: 'Naina Wooden - Wooden Work',
+      repo: 'nainawooden',
+      url: 'https://nainawooden.com/',
+      description: 'Wooden work products e-commerce',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'php',
+      image: 'https://via.placeholder.com/400x300?text=Naina+Wooden'
+    },
+    // Laravel Projects
+    {
+      name: 'Elite Design Consultants - Architecture',
+      repo: 'elitedesignconsultants',
+      url: 'https://elitedesignconsultants.in/',
+      description: 'Architectural services website',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'laravel',
+      image: 'https://via.placeholder.com/400x300?text=Elite+Design+Consultants'
+    },
+    {
+      name: 'Gunnu Wooden - Wooden Work',
+      repo: 'gunnuwooden',
+      url: 'http://gunnuwooden.com/',
+      description: 'Wooden work services website',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'laravel',
+      image: 'https://via.placeholder.com/400x300?text=Gunnu+Wooden'
+    },
+    {
+      name: 'Bhardwaj Architects',
+      repo: 'bhardwajarchitects',
+      url: 'https://bhardwajarchitects.in/',
+      description: 'Architectural services website',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'laravel',
+      image: 'https://via.placeholder.com/400x300?text=Bhardwaj+Architects'
+    },
+    {
+      name: 'G Tech Logics India - Company Website',
+      repo: 'gtechlogicsindia',
+      url: 'https://gtechlogicsindia.com/',
+      description: 'Company website for tech services',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'laravel',
+      image: 'https://via.placeholder.com/400x300?text=G+Tech+Logics+India'
+    },
+    {
+      name: 'Cure Comm Solutions - HRM & Marketing',
+      repo: 'curecommsolutions',
+      url: 'https://curecommsolutions.com/',
+      description: 'HRM and marketing related website',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'laravel',
+      image: 'https://via.placeholder.com/400x300?text=Cure+Comm+Solutions'
+    },
+    // MERN Projects
+    {
+      name: 'RoomDekho - Property Rent & Selling',
+      repo: 'roomdekho-live',
+      url: 'http://roomdekho.nainawooden.com/',
+      description: 'Property rental and selling platform',
+      tech: ['React.js', 'Node.js', 'MongoDB', 'Express'],
+      type: 'mern',
+      image: 'https://via.placeholder.com/400x300?text=RoomDekho'
     }
   ];
 
@@ -125,13 +182,13 @@ const Portfolio = () => {
         </motion.h2>
         
         <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          A collection of full-stack, frontend, and backend projects showcasing my expertise 
-          in PHP, Laravel, React.js, Node.js, and MongoDB
+          A collection of full-stack, frontend, backend, PHP, Laravel, and MERN projects showcasing my expertise 
+          in PHP, Laravel, React.js, Node.js, MongoDB, and various web technologies
         </p>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {['all', 'full-stack', 'frontend', 'backend'].map(category => (
+          {['all', 'full-stack', 'frontend', 'backend', 'php', 'laravel', 'mern'].map(category => (
             <motion.button
               key={category}
               onClick={() => setFilter(category)}
