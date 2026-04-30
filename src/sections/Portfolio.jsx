@@ -6,164 +6,118 @@ import ProjectCard from './ProjectCard';
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
 
+  const thumbnailUrl = (url) =>
+    `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=600`;
+
   const projectData = [
-    
-    {
-      name: 'Esscopic - Machinery & Motors',
-      repo: 'esscopic',
-      url: 'https://esscopic.in/',
-      description: 'E-commerce platform for machinery and motor products',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Esscopic'
-    },
-    {
-      name: 'Zylotech India - IT Services',
-      repo: 'zylotechindia',
-      url: 'https://zylotechindia.com/',
-      description: 'IT services selling website',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Zylotech+India'
-    },
-    {
-      name: 'Kamsun Electronics',
-      repo: 'kamsungelectronics',
-      url: 'https://kamsungelectronics.com/',
-      description: 'E-commerce for electronics products',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Kamsun+Electronics'
-    },
-    {
-      name: 'Cloud Chaser - IT Services',
-      repo: 'cloudchaser',
-      url: 'https://cloudchaser.co.in/',
-      description: 'IT services selling website',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Cloud+Chaser'
-    },
-    {
-      name: 'Pincleiq Solutions - Electronics',
-      repo: 'pincleiqsolutions',
-      url: 'https://pincleiqsolutions.co.in/',
-      description: 'E-commerce platform for electronics products',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Pincleiq+Solutions'
-    },
-    {
-      name: 'Buttonhole - Mens Wear',
-      repo: 'buttonhole',
-      url: 'https://buttonhole.in/',
-      description: 'E-commerce for mens wear products',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Buttonhole'
-    },
-    {
-      name: 'Atharvke Electronics',
-      repo: 'atharvkelectronics',
-      url: 'https://atharvkelectronics.in/',
-      description: 'Electronic product selling e-commerce site',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Atharvke+Electronics'
-    },
-    {
-      name: 'Poulomi India - Mens Wear',
-      repo: 'poulomiindia',
-      url: 'https://poulomiindia.com/',
-      description: 'E-commerce for mens wear',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Poulomi+India'
-    },
-    {
-      name: 'Consulenza - Mens Wear',
-      repo: 'consulenza',
-      url: 'https://consulenza.co.in/',
-      description: 'Mens wear product e-commerce',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Consulenza'
-    },
-    {
-      name: 'Tixri Logistics - Mens & Women',
-      repo: 'tixrilogistics',
-      url: 'https://tixrilogistics.com/',
-      description: 'E-commerce for mens and women products',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Tixri+Logistics'
-    },
-    {
-      name: 'Naina Wooden - Wooden Work',
-      repo: 'nainawooden',
-      url: 'https://nainawooden.com/',
-      description: 'Wooden work products e-commerce',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'php',
-      image: 'https://via.placeholder.com/400x300?text=Naina+Wooden'
-    },
-    // Laravel Projects
-    {
-      name: 'Elite Design Consultants - Architecture',
-      repo: 'elitedesignconsultants',
-      url: 'https://elitedesignconsultants.in/',
-      description: 'Architectural services website',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
-      type: 'laravel',
-      image: 'https://via.placeholder.com/400x300?text=Elite+Design+Consultants'
-    },
-    {
-      name: 'Gunnu Wooden - Wooden Work',
-      repo: 'gunnuwooden',
-      url: 'http://gunnuwooden.com/',
-      description: 'Wooden work services website',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
-      type: 'laravel',
-      image: 'https://via.placeholder.com/400x300?text=Gunnu+Wooden'
-    },
     {
       name: 'Bhardwaj Architects',
       repo: 'bhardwajarchitects',
-      url: 'https://bhardwajarchitects.in/',
-      description: 'Architectural services website',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
-      type: 'laravel',
-      image: 'https://via.placeholder.com/400x300?text=Bhardwaj+Architects'
+      url: 'http://bhardwajarchitects.in',
+      description: 'Architecture and interior design website for planning, turnkey services, portfolios, team profiles, and appointment enquiries.',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+      type: 'architecture'
     },
     {
-      name: 'G Tech Logics India - Company Website',
-      repo: 'gtechlogicsindia',
-      url: 'https://gtechlogicsindia.com/',
-      description: 'Company website for tech services',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
-      type: 'laravel',
-      image: 'https://via.placeholder.com/400x300?text=G+Tech+Logics+India'
+      name: 'Naina Wooden',
+      repo: 'nainawooden',
+      url: 'http://nainawooden.com',
+      description: 'Wooden work and furniture business website showcasing custom wood services, product categories, and customer enquiries.',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'furniture'
     },
     {
-      name: 'Cure Comm Solutions - HRM & Marketing',
+      name: 'Curecomm Solutions',
       repo: 'curecommsolutions',
       url: 'https://curecommsolutions.com/',
-      description: 'HRM and marketing related website',
-      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
-      type: 'laravel',
-      image: 'https://via.placeholder.com/400x300?text=Cure+Comm+Solutions'
+      description: 'Promotech and HRMS platform website covering reward engine, loyalty campaigns, ecommerce, fulfilment, and lead generation.',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+      type: 'business'
     },
-    // MERN Projects
     {
-      name: 'RoomDekho - Property Rent & Selling',
-      repo: 'roomdekho-live',
-      url: 'http://roomdekho.nainawooden.com/',
-      description: 'Property rental and selling platform',
-      tech: ['React.js', 'Node.js', 'MongoDB', 'Express'],
-      type: 'mern',
-      image: 'https://via.placeholder.com/400x300?text=RoomDekho'
+      name: 'Buttonhole',
+      repo: 'buttonhole',
+      url: 'http://buttonhole.in',
+      description: 'Menswear ecommerce website with product catalogue, cart, user login, policy pages, and customer account flow.',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'ecommerce'
+    },
+    {
+      name: 'Kamsung Electronics',
+      repo: 'kamsungelectronics',
+      url: 'http://kamsungelectronics.com',
+      description: 'Electronics ecommerce website for computer peripherals, mobile accessories, audio devices, cables, and electrical products.',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'ecommerce'
+    },
+    {
+      name: 'Poulomi India',
+      repo: 'poulomiindia',
+      url: 'https://poulomiindia.com/',
+      description: 'Fashion ecommerce website for menswear products with catalogue browsing, cart, account pages, and order support.',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'ecommerce'
+    },
+    {
+      name: 'Gunnu Furniture',
+      repo: 'gunnuwooden',
+      url: 'http://gunnuwooden.com',
+      description: 'Furniture and wooden work website featuring custom furniture, repair services, brochure download, and enquiry details.',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'furniture'
+    },
+    {
+      name: 'Consulenza',
+      repo: 'consulenza',
+      url: 'https://consulenza.co.in',
+      description: 'Menswear ecommerce website with product listings, shopping cart, login, customer policies, and contact information.',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'ecommerce'
+    },
+    {
+      name: 'Kasvee',
+      repo: 'kasvee',
+      url: 'https://kasvee.in/',
+      description: 'Business website built for a polished online presence with responsive pages, service information, and contact flow.',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+      type: 'business'
+    },
+    {
+      name: 'Elite Design Consultants',
+      repo: 'elitedesignconsultants',
+      url: 'http://elitedesignconsultants.in',
+      description: 'Architecture and interior design website with services, project showcases, consultation booking, and lead capture.',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'architecture'
+    },
+    {
+      name: 'Prime Picks India',
+      repo: 'primepicksindia',
+      url: 'http://primepicksindia.co.in',
+      description: 'Ecommerce website for curated product selling with shopping flow, catalogue pages, customer account, and order features.',
+      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      type: 'ecommerce'
+    },
+    {
+      name: 'Zylotech India',
+      repo: 'zylotechindia',
+      url: 'http://zylotechindia.com',
+      description: 'IT services company website for web development, software development, UI/UX, mobile app development, and branding.',
+      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+      type: 'it-services'
+    },
+    {
+      name: 'Xeno Build',
+      repo: 'xenobuild',
+      url: 'https://xenobuild.co.in/',
+      description: 'Construction and building services website focused on company presentation, service pages, and customer enquiries.',
+      tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
+      type: 'business'
     }
-  ];
+  ].map((project) => ({
+    ...project,
+    image: thumbnailUrl(project.url)
+  }));
 
   const filteredProjects = filter === 'all' 
     ? projectData 
@@ -188,7 +142,7 @@ const Portfolio = () => {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {['all', 'full-stack', 'frontend', 'backend', 'php', 'laravel', 'mern'].map(category => (
+          {['all', 'architecture', 'ecommerce', 'furniture', 'business', 'it-services'].map(category => (
             <motion.button
               key={category}
               onClick={() => setFilter(category)}

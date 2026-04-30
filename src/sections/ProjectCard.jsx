@@ -1,15 +1,18 @@
 // src/components/ProjectCard.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 
 const ProjectCard = ({ project, index }) => {
   return (
-    <motion.div
+    <motion.a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-teal-500 group"
+      className="block bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-teal-500 group"
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden bg-gray-800">
@@ -20,14 +23,9 @@ const ProjectCard = ({ project, index }) => {
         />
         <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
           <div className="flex gap-4">
-            <a 
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-teal-500 rounded-full hover:bg-teal-600 transition"
-            >
-              <FiGithub size={24} />
-            </a>
+            <span className="p-3 bg-teal-500 rounded-full group-hover:bg-teal-600 transition">
+              <FiExternalLink size={24} />
+            </span>
           </div>
         </div>
       </div>
@@ -51,17 +49,12 @@ const ProjectCard = ({ project, index }) => {
 
         {/* Links */}
         <div className="flex gap-3">
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded hover:bg-teal-500/40 transition text-sm font-semibold"
-          >
-            <FiGithub size={16} /> View Code
-          </a>
+          <span className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-teal-500/20 text-teal-400 rounded group-hover:bg-teal-500/40 transition text-sm font-semibold">
+            <FiExternalLink size={16} /> Visit Site
+          </span>
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 

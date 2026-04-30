@@ -12,8 +12,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    alert('Message sent! I\'ll get back to you soon.');
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name || 'visitor'}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:amirsaifi786@gmail.com?subject=${subject}&body=${body}`;
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -88,7 +91,7 @@ const Contact = () => {
               <a href="https://twitter.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiTwitter size={24} />
               </a>
-              <a href="mailto:your@email.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
+              <a href="mailto:amirsaifi786@gmail.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiMail size={24} />
               </a>
             </div>

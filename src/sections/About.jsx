@@ -43,12 +43,12 @@ const About = () => {
           </p>
 
           <motion.a
-            href="/path-to-resume.pdf"
+            href="#contact"
             className="inline-block mt-8 px-6 py-3 bg-teal-500 hover:bg-teal-600 rounded-lg font-semibold transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-        📥 Download Resume
+            Contact Me
           </motion.a>
         </motion.div>
       </div>
