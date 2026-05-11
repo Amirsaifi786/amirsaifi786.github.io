@@ -74,14 +74,14 @@ const Portfolio = () => {
       tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
       type: 'ecommerce'
     },
-    {
-      name: 'Kasvee',
-      repo: 'kasvee',
-      url: 'https://kasvee.in/',
-      description: 'Business website built for a polished online presence with responsive pages, service information, and contact flow.',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
-      type: 'business'
-    },
+    // {
+    //   name: 'Kasvee',
+    //   repo: 'kasvee',
+    //   url: 'https://kasvee.in/',
+    //   description: 'Business website built for a polished online presence with responsive pages, service information, and contact flow.',
+    //   tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+    //   type: 'business'
+    // },
     {
       name: 'Elite Design Consultants',
       repo: 'elitedesignconsultants',
@@ -90,14 +90,14 @@ const Portfolio = () => {
       tech: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Bootstrap'],
       type: 'architecture'
     },
-    {
-      name: 'Prime Picks India',
-      repo: 'primepicksindia',
-      url: 'http://primepicksindia.co.in',
-      description: 'Ecommerce website for curated product selling with shopping flow, catalogue pages, customer account, and order features.',
-      tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-      type: 'ecommerce'
-    },
+    // {
+    //   name: 'Prime Picks India',
+    //   repo: 'primepicksindia',
+    //   url: 'http://primepicksindia.co.in',
+    //   description: 'Ecommerce website for curated product selling with shopping flow, catalogue pages, customer account, and order features.',
+    //   tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    //   type: 'ecommerce'
+    // },
     {
       name: 'Zylotech India',
       repo: 'zylotechindia',
