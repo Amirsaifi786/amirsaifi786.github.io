@@ -10,14 +10,14 @@ const Portfolio = () => {
     `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=600`;
 
   const projectData = [
-    {
-      name: 'Bhardwaj Architects',
-      repo: 'bhardwajarchitects',
-      url: 'http://bhardwajarchitects.in',
-      description: 'Architecture and interior design website for planning, turnkey services, portfolios, team profiles, and appointment enquiries.',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
-      type: 'architecture'
-    },
+    // {
+    //   name: 'Bhardwaj Architects',
+    //   repo: 'bhardwajarchitects',
+    //   url: 'http://bhardwajarchitects.in',
+    //   description: 'Architecture and interior design website for planning, turnkey services, portfolios, team profiles, and appointment enquiries.',
+    //   tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+    //   type: 'architecture'
+    // },
     {
       name: 'Naina Wooden',
       repo: 'nainawooden',
@@ -34,14 +34,14 @@ const Portfolio = () => {
       tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
       type: 'business'
     },
-    {
-      name: 'Buttonhole',
-      repo: 'buttonhole',
-      url: 'http://buttonhole.in',
-      description: 'Menswear ecommerce website with product catalogue, cart, user login, policy pages, and customer account flow.',
-      tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-      type: 'ecommerce'
-    },
+    // {
+    //   name: 'Buttonhole',
+    //   repo: 'buttonhole',
+    //   url: 'http://buttonhole.in',
+    //   description: 'Menswear ecommerce website with product catalogue, cart, user login, policy pages, and customer account flow.',
+    //   tech: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+    //   type: 'ecommerce'
+    // },
     {
       name: 'Kamsung Electronics',
       repo: 'kamsungelectronics',
