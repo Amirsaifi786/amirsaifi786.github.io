@@ -14,7 +14,7 @@ const Portfolio = () => {
       name: 'Bhardwaj Architects',
       repo: 'bhardwajarchitects',
       url: 'http://bhardwajarchitects.in',
-      description: '  test Architecture and interior design website for planning, turnkey services, portfolios, team profiles, and appointment enquiries.',
+      description: '   Architecture and interior design website for planning, turnkey services, portfolios, team profiles, and appointment enquiries.',
       tech: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
       type: 'architecture'
     },
