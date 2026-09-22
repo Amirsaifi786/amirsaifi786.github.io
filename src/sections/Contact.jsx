@@ -16,7 +16,7 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
     );
-    window.location.href = `mailto:amirsaifi786@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:amirsaifi7671@gmail.com?subject=${subject}&body=${body}`;
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -82,7 +82,7 @@ const Contact = () => {
           <div className="border-t border-gray-700 pt-8">
             <p className="text-center text-gray-400 mb-6">Or connect with me on:</p>
             <div className="flex justify-center gap-6">
-              <a href="https://linkedin.com/in/amir-saifi" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
+              <a href="https://linkedin.com/in/amir-saifi-dev" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiLinkedin size={24} />
               </a>
               <a href="https://github.com/Amirsaifi786" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
@@ -91,7 +91,7 @@ const Contact = () => {
               <a href="https://twitter.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiTwitter size={24} />
               </a>
-              <a href="mailto:amirsaifi786@gmail.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
+              <a href="mailto:amirsaifi7671@gmail.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiMail size={24} />
               </a>
             </div>
