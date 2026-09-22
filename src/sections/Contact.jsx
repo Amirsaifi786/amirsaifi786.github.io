@@ -88,9 +88,7 @@ const Contact = () => {
               <a href="https://github.com/Amirsaifi786" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiGithub size={24} />
               </a>
-              {/* <a href="https://twitter.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
-                <FiTwitter size={24} />
-              </a> */}
+    
               <a href="mailto:amirsaifi7671@gmail.com" className="p-3 bg-gray-700 hover:bg-teal-500/30 rounded-full transition">
                 <FiMail size={24} />
               </a>
