@@ -48,7 +48,8 @@ const Contact = () => {
     try {
       await emailjs.send(
         'service_4u66lo8',
-        'template_f072spd',
+        'template_60omk9h',
+        
         {
           name: formData.name,
           email: formData.email,
