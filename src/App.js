@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Skills from './sections/Skills';
 import Portfolio from './sections/Portfolio';
+import Resume from './sections/Resume';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
         <About />
         <Skills />
         <Portfolio />
+        <Resume />
         <Contact />
       </main>
       <Footer />
