@@ -16,14 +16,15 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 z-50"
+      className="site-nav fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 z-50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-teal-400">
-          Amir Saifi
+        <a href="#home" className="site-brand text-2xl font-bold text-teal-400" aria-label="Amir Saifi, home">
+          <span className="brand-mark">AS</span>
+          <span>Amir Saifi</span>
         </a>
 
         {/* Desktop Menu */}
@@ -32,7 +33,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-300 hover:text-teal-400 transition font-medium"
+              className="site-nav-link text-gray-300 hover:text-teal-400 transition font-medium"
             >
               {link.label}
             </a>
@@ -40,7 +41,12 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="site-menu-button md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isOpen}
+        >
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
       </div>
@@ -48,7 +54,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden bg-gray-800 border-t border-gray-700"
+          className="site-mobile-menu md:hidden bg-gray-800 border-t border-gray-700"
           initial={{ height: 0 }}
           animate={{ height: 'auto' }}
         >
@@ -57,7 +63,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-teal-400 transition"
+                className="site-nav-link text-gray-300 hover:text-teal-400 transition"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

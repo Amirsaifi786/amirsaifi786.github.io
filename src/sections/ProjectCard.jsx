@@ -3,15 +3,19 @@ import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 
 const ProjectCard = ({ project, index }) => {
-  const [showCard, setShowCard] = useState(true);
-
-  if (!showCard) return null;
+  const [imageUnavailable, setImageUnavailable] = useState(false);
+  const initials = project.name
+    .split(' ')
+    .slice(0, 2)
+    .map((word) => word.charAt(0))
+    .join('');
 
   return (
     <motion.a
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={`Visit ${project.name} website`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -19,12 +23,20 @@ const ProjectCard = ({ project, index }) => {
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden bg-gray-800">
-        <img
-          src={project.image}
-          alt={project.name}
-          onError={() => setShowCard(false)}
-          className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-        />
+        {imageUnavailable ? (
+          <div className="project-preview-fallback" aria-hidden="true">
+            <span>Selected work</span>
+            <strong>{initials}</strong>
+            <small>{project.name}</small>
+          </div>
+        ) : (
+          <img
+            src={project.image}
+            alt={`${project.name} website preview`}
+            onError={() => setImageUnavailable(true)}
+            className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+          />
+        )}
 
         <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
           <span className="p-3 bg-teal-500 rounded-full group-hover:bg-teal-600 transition">

@@ -73,3 +73,7 @@ After deployment, open:
 ```text
 https://amirsaifi786.github.io/
 ```
+
+
+mail send through    
+ mailjs   https://www.emailjs.com/

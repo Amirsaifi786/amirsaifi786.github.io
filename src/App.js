@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-gray-900 text-gray-100 min-h-screen">
+    <div className="portfolio-shell bg-gray-900 text-gray-100 min-h-screen">
       <Navbar />
       <main>
         <Hero />
